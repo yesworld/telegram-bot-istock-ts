@@ -1,0 +1,36 @@
+{
+  "name": "istock-telegram-bot-ts",
+  "version": "0.0.1",
+  "description": "Telegram bot only for teaching. No commerce!",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "start:dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node -r tsconfig-paths/register ./src/index.ts",
+    "start:prod": "node dist/index.js",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint:fix": "tslint -c tslint.json -p tsconfig.json --fix"
+  },
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "telegraf": "^3.29.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^11.13.4",
+    "nodemon": "^1.18.11",
+    "ts-node": "^8.1.0",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.15.0",
+    "tslint-consistent-codestyle": "^1.15.1",
+    "typescript": "^3.4.3"
+  },
+  "license": "MIT",
+  "keywords": [
+    "typescript",
+    "telegram",
+    "telegram bot",
+    "telegram bot api",
+    "bot",
+    "telegram api"
+  ]
+}
