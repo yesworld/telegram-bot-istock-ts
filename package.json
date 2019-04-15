@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Telegram bot only for teaching. No commerce!",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
     "start:dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node -r tsconfig-paths/register ./src/index.ts",
     "start:prod": "node dist/index.js",
@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "dotenv": "^7.0.0",
-    "telegraf": "^3.29.0"
+    "telegraf": "^3.29.0",
+    "telegraf-ratelimit": "^2.0.0"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
@@ -28,9 +29,8 @@
   "keywords": [
     "typescript",
     "telegram",
-    "telegram bot",
-    "telegram bot api",
+    "photo",
     "bot",
-    "telegram api"
+    "api"
   ]
 }

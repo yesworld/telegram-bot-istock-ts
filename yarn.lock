@@ -1729,6 +1729,13 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
+telegraf-ratelimit@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/telegraf-ratelimit/-/telegraf-ratelimit-2.0.0.tgz#64c72d77913901f92c690cd9078b1f724ef4268a"
+  integrity sha512-OUVJRz+pVDpkOfwvFuv4x5YxcPIl6puPN3HRdicN3NDnT+jQeMzKDwVAkvloUtyH1Ruo1wH4nfB5tZbtJAJ4pQ==
+  dependencies:
+    debug "^3.1.0"
+
 telegraf@^3.29.0:
   version "3.29.0"
   resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-3.29.0.tgz#0655d02b9a2d72d53ff20787947aa10ad54a747c"
