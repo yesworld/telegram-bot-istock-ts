@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-⚠️ **Disclaimer**: The iStock photos found in Google are the subject of copyright laws, and not allowed to be used for any pusposes. You need to buy them first on iStock.com. This bot was developed for education purposes only. ⚠
+⚠️ **Disclaimer**: The iStock photos found in Google are the subject of copyright laws, and not allowed to be used for any pusposes. You need to buy them first on iStock.com. This bot was developed for education purposes only. ⚠️
 
 
 ## Installation
@@ -20,3 +20,5 @@ $ yarn
 $ yarn run start
 ```
 
+## Live example in the Telegram
+@istockBot
