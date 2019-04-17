@@ -1,26 +1,27 @@
 import Telegraf, { ContextMessageUpdate } from 'telegraf'
+import * as HttpsProxyAgent from 'https-proxy-agent'
+import { HttpsProxyAgentOptions } from 'https-proxy-agent'
 
 import { ResultData } from '@/helper/parser'
 import Fetch from '@/helper/fetch'
-import { TOKEN } from '@/config'
+import { TOKEN, PROXY_HOST, PROXY_PORT } from '@/config'
 
 (async () => { // tslint:disable-line
 
-  const bot = new Telegraf(TOKEN)
+  const options: HttpsProxyAgentOptions = { host: PROXY_HOST, port: PROXY_PORT }
+
+  const bot = new Telegraf(TOKEN, {
+    telegram: {
+      agent: new HttpsProxyAgent(options),
+    },
+  })
   const F = new Fetch()
-
-  // F.parse({ url: 'https://www.istockphoto.com/de/en/photo/overpass-at-night-gm514520416-88146253'}, (data) => {
-  //   console.log('1)', data)
-  // })
-
-  // F.parse({ url: 'https://www.istockphoto.com/de/en/photo/traffic-at-night-gm514506970-88132849'}, (data) => {
-  //   console.log('2)', data)
-  // })
 
   bot.start((ctx: ContextMessageUpdate) => ctx.replyWithHTML(
       `Welcome!\nI am a bot to search for photos from www.istockphoto.com in Google. \n\n` +
-      `⚠ <b>Disclaimer</b>: The iStock photos found in Google are the subject of copyright laws,  ` +
-      `and not allowed to be used for any pusposes. You need to buy them first on iStock.com. This bot was developed for education purposes only. ⚠\n\n` +
+      `⚠ <b>Disclaimer</b>: The iStock photos found in Google are the subject of copyright laws, ` +
+      `and not allowed to be used for any pusposes. You need to buy them first on iStock.com. ` +
+      `This bot was developed for education purposes only. ⚠\n\n` +
       `Send me a photo: [url]`,
   ))
 

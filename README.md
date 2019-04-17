@@ -19,6 +19,3 @@ $ yarn
 ```bash
 $ yarn run start
 ```
-
-## Live example in the Telegram
-@istockBot
