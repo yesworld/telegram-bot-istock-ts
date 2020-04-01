@@ -1,6 +1,6 @@
 {
   "name": "istock-telegram-bot-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Telegram bot to search for photos from iStock in Google. This bot was developed for education purposes only!",
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
@@ -14,7 +14,6 @@
     "https-proxy-agent": "^2.2.1",
     "needle": "^2.3.0",
     "telegraf": "^3.29.0",
-    "telegraf-ratelimit": "^2.0.0",
     "tress": "^1.1.4"
   },
   "devDependencies": {
